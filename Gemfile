@@ -11,3 +11,5 @@ gem 'spring', group: :development
 gem 'sqlite3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'devise'
+gem 'better_errors'
