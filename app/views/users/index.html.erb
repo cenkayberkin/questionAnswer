@@ -1,0 +1,42 @@
+<h1>Listing users</h1>
+<div>
+  <% @users.each do |user| %>
+    <p>
+      <%= user.email %>
+      <h4>Contribution:</h4>
+      <div class="answers">
+        <h5>Answers</h5>
+        <p>
+          <ul>
+          <% user.answers.each do |answer| %>
+            <li>
+              <%= answer.body %>
+              </br>
+              users answer to question <%= answer.question.title %>
+            </li>
+          <% end %>
+          </ul>
+        </p>
+      </div>
+      <div class="questions">
+        <h5>questions</h5>
+        <p>
+          <ul>
+          <% user.questions.each do |question| %>
+            <li>
+             <p>
+              <%= question.title %>
+             </p>
+             <p>
+               <%= question.body %>
+             </p>
+            </li>
+          <% end %>
+          </ul>
+        </p>
+      </div>
+    </p>
+  <% end %>
+</div>
+
+
